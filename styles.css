@@ -202,7 +202,7 @@ section.gallery {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 14pt;
         text-decoration: #ff0000;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         top: 0;
         text-align: left;
         font-size: 10pt;
@@ -213,7 +213,6 @@ section.gallery {
         background :none;
         padding: 30px 0;
         max-width: 50%;
-        position: absolute;
         text-align: left;
         font-size: 10pt;
     
