@@ -228,17 +228,15 @@ section.gallery {
     }
     section.gallery {
         display: grid;
-        grid-auto-columns: auto;
-        grid-auto-rows: auto;
-        text-align: center;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
         padding: 10px;
       }
       section.gallery img {
-        width: 80px;
-        height: 80px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border: 3cm;
-        border-radius: 1cm;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
       }
       .heading2 {
         background-color: rgba(240, 248, 255, 0.753);
