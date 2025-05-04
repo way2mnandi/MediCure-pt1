@@ -204,19 +204,20 @@ section.gallery {
         text-decoration: #ff0000;
         color: rgb(255, 255, 255);
         top: 0;
-        text-align: left;
+        text-align: center;
         font-size: 10pt;
     }
     
     .navpan {
         text-transform: uppercase;
-        padding: 0% 0;
+        padding: 10px;
         padding-bottom:20px;
         max-width: 100%;
         text-align: center;
         font-size: 10pt;
         padding-top: 20px;
         background-color: rgba(0, 0, 0, 0.281);
+        align-content: center;
     }
         .navpan a:hover {
             font-size: 10pt;
@@ -261,4 +262,6 @@ section.gallery {
         -webkit-text-stroke: 0.005cm red;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
+      .galleryline
+      {display: none;}
 }
