@@ -132,20 +132,20 @@ h2 {
 .link {
     text-decoration: none;
     font-size: larger; font-family:Cambria, Cochin, Georgia, Times,'Times New Roman', serif;
+    text-align: center;
 
 }
 section.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 150px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
     padding: 10px;
   }
   section.gallery img {
-    width: 250px;
-    height: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 3cm;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
   }
   .heading2 {
     background-color: rgba(240, 248, 255, 0.753);
@@ -213,11 +213,10 @@ section.gallery {
         padding: 0% 0;
         padding-bottom:20px;
         max-width: 100%;
-        text-align: left;
+        text-align: center;
         font-size: 10pt;
         padding-top: 20px;
         background-color: rgba(0, 0, 0, 0.281);
-        position: relative;
     }
         .navpan a:hover {
             font-size: 10pt;
