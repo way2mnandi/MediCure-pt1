@@ -197,6 +197,17 @@ section.gallery {
         text-shadow: 0.025cm black transparent -20%;
         font-family: sans-serif;
     }
+    .navpan a {
+        text-decoration-color: rgb(255, 0, 0);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 14pt;
+        text-decoration: #ff0000;
+        color: rgb(0, 0, 0);
+        top: 0;
+        text-align: left;
+        font-size: 10pt;
+    }
+    
     .navpan {
         text-transform: uppercase;
         background :none;
