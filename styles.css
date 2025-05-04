@@ -210,7 +210,7 @@ section.gallery {
         background :none;
         padding: 30px 0;
         max-width: 50%;
-        position:relative;
+        position: absolute;
         right: 15%;
         top: 0;
         text-align: center;
