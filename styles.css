@@ -215,10 +215,15 @@ section.gallery {
         max-width: 100%;
         text-align: left;
         font-size: 10pt;
+        padding-top: 10px;
+        background-color: black;
     }
         .navpan a:hover {
             font-size: 10pt;
             text-decoration: overline red;
+    }
+    .staffdown-content a {
+        color: black;
     }
     section.gallery {
         display: flex;
