@@ -226,8 +226,9 @@ section.gallery {
     }
     section.gallery {
         display: grid;
-grid-row: inherit;
-        gap: 30px;
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+        gap: 10px;
         justify-content: center;
         padding: 10px;
       }
