@@ -225,8 +225,8 @@ section.gallery {
         color: black;
     }
     section.gallery {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+grid-row: inherit;
         gap: 30px;
         justify-content: center;
         padding: 10px;
