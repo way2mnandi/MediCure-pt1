@@ -183,7 +183,7 @@ section.gallery {
 .show:target {
     display: contents;
 }
-@media (max-width: 768px) /*mobile viewing compatibility*/ {
+@media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
     .headingg{
         font-family: sans-serif;
         text-align: center;
