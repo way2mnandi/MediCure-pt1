@@ -201,7 +201,7 @@ section.gallery {
         text-decoration-color: beige;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 14pt;
-        text-decoration: white;
+        text-decoration: rgb(0, 0, 0);
         color: beige;
     }
     
