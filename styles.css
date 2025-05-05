@@ -178,13 +178,8 @@ section.gallery {
 }
 .navpan-2 {
   display: none;
-  font-size: 14pt;
-  color: antiquewhite;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.navpan-2 a {
-  text-decoration: none;
-  text-align: center;
+  
+
 }
 .staff-nav {
   display: none;
@@ -245,14 +240,22 @@ section.gallery {
       }
       .navpan-2 {
         display: contents;
-        background-color: rgba(0, 0, 0, 0.39);
         max-width: 100%;
         padding: 0px;
+        background-color: rgba(250, 235, 215, 0.5);
+        
+      }
+      .navpan-2 a {
+        text-align: center;
+        font-size: 10pt;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: white;
       }
       .staff-nav {
         display: contents;
-        text-align: center;
-        font-size: 10pt;
-        background-color: #dddddd80;
+
+      }
+      .staff-nav a {
+        color: black;
       }
 }
