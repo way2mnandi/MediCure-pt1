@@ -175,13 +175,19 @@ section.gallery {
   .show h3 {
 
     text-align: center;
-  }
-.showev {
-    display:none;
-    text-align: center;
 }
-.show:target {
-    display: contents;
+.navpan-2 {
+  display: none;
+  font-size: 14pt;
+  color: antiquewhite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.navpan-2 a {
+  text-decoration: none;
+  text-align: center;
+}
+.staff-nav {
+  display: none;
 }
 @media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
     .headingg{
@@ -197,35 +203,10 @@ section.gallery {
         text-shadow: 0.025cm black transparent -20%;
         font-family: sans-serif;
     }
-    .navpan a {
-        text-decoration-color: rgb(255, 0, 0);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 10pt;
-        text-decoration: #ff0000;
-        color: rgb(255, 255, 255);
-        top: 0;
-        text-align: center;
-        font-size: 10pt;
-    }
-    
     .navpan {
-        text-transform: uppercase;
-        padding: 10px;
-        padding-bottom:20px;
-        max-width: 100%;
-        text-align: center;
-        font-size: 10pt;
-        padding-top: 20px;
-        background-color: rgba(0, 0, 0, 0.281);
-        align-content: center;
+        display: none;
     }
-        .navpan a:hover {
-            font-size: 10pt;
-            text-decoration: overline red;
-    }
-    .staffdown-content a {
-        color: black;
-    }
+
     section.gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -262,6 +243,16 @@ section.gallery {
         -webkit-text-stroke: 0.005cm red;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
-      .galleryline
-      {display: none;}
+      .navpan-2 {
+        display: contents;
+        background-color: rgba(0, 0, 0, 0.39);
+        max-width: 100%;
+        padding: 0px;
+      }
+      .staff-nav {
+        display: contents;
+        text-align: center;
+        font-size: 10pt;
+        background-color: #dddddd80;
+      }
 }
