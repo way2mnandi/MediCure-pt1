@@ -127,11 +127,9 @@ h2 {
     background-color: black;
     text-align: left;
     color: #ddd;
-    flex: 1;
-            padding: 0px;
-            overflow: auto;
-            max-width: 100%;
-            margin-left: 0px;
+padding: 10px;
+  max-width: 100%;
+       margin-left: 0px;
             
 }
 .bottompan p {
@@ -145,13 +143,13 @@ h2 {
 }
 section.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px;
   }
   section.gallery img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
   }
@@ -189,7 +187,7 @@ section.gallery {
     display: none;
   }
   .staff-nav ul {
-    display: none;
+    display: none; /*hides mobile staff navigation*/
   }
   .stf {
     -webkit-text-stroke: 0.02cm white;
@@ -199,12 +197,12 @@ section.gallery {
     text-align: center;
 }
 .navpan-2 {
-  display: none;
+  display: none;  /*second navigation panel initially hidden*/
   
 
 }
 .staff-nav {
-  display: none;
+  display: none;   /*hidden until changed to portrait screen orientation*/
 }
 section.home-gallery {
   display: grid;
@@ -236,7 +234,7 @@ section.home-gallery img {
         font-family: sans-serif;
     }
     .navpan {
-        display: none;
+        display: none;   /*hides initial navigation panel to enhance responsiveness*/
     }
 
     section.gallery {
@@ -292,7 +290,7 @@ padding: 0%;
         color: white;
       }
       .staff-nav {
-        display: contents;
+        display: contents;   /*new navigation panel FOR STAFF SECTION*/
 
       }
       .staff-nav a {
@@ -310,7 +308,7 @@ padding: 0%;
         padding: 0px;
     }
     .head1 p {
-      display: contents;
+      display: contents;  /*displays paragraph only for portrait orientation*/
       text-align: left;
     }
     .staff-nav ul {
