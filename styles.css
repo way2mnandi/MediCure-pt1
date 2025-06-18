@@ -383,12 +383,14 @@ padding: 0%;
     .images img{
       border-radius: 5px;
       width: 75%;
-      height: 30%;
+      height: 50%;
     }
     .med-gallery{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;}
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      padding: 10px;
+    }
       
     .capt {
       font-size: small;
