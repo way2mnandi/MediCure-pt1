@@ -28,3 +28,12 @@ added more pages
  responsiveness
  detailed styling
  more commits
+
+ 25 May - 10 June
+ medical products research
+ form structuring
+ javascript implementation
+ adding more information
+
+ 16 June 
+ 

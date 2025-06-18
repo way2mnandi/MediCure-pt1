@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Home</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     
@@ -30,9 +35,10 @@
     <br><p class="slog">Accessible Healthcare <br> Anytime, Anywhere</p>
     <br>
     <p class="slog">Welcome to MediCure, a national solution for the busy citizens of South Africa.
-        Need a consultation? No problem, head to the <a href="#top">top</a> of the page and click on the "Our Staff" section to find
-        the practitioner of your choice
+        Feeling a bit under the weather today? No problem, click below to have a specialist attend to you.<br>
+        <a href="#showev" id="clickshow" class="clickshow">Consult</a>
     </p>
+    
  <section class="home-gallery">
     <img src="homeimg1.jfif">
     <img src="homeimg2.jfif">
@@ -40,8 +46,12 @@
     <img src="homeimg4.jfif">
     <img src="homeimg5.jfif">
  </section>
+ <section id="showev" class="showev"><p align="center" >You can click <a href="">here</a> to input your symptoms and the relevant specialist 
+will contact you ASAP with a way forward. Please remember, this is NOT a diagnosis. Be honest and transparent about how you are feeling as 
+these results go directly to our specialists, thank you</p></section>
+ 
+
     </div>
-    <section id="showev" class="show"><p></p></section>
     
     
     <footer class="bottompan">
@@ -50,5 +60,6 @@
     <p><strong>Phone:</strong> +27 11 456 7890</p>
     <p><strong>Email:</strong> <a class="link" href="letushelp@medicure.co.za">letushelp@medicure.co.za</a></p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

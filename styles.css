@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-image: url("BG.jpeg");
     background-attachment: scroll;
@@ -112,10 +115,12 @@ h2 {
 .staff-section {
     display: none;
     border-radius: 10px;
+    transition: ease-in 2s;
 }
 
 .staff-section:target {
     display:contents;
+  
 }
 .slog {
     font-size: large;
@@ -192,9 +197,29 @@ section.gallery {
   .stf {
     -webkit-text-stroke: 0.02cm white;
   }
-  .show h3 {
-
+  .showev {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
     text-align: center;
+    font-size: 30px;
+    
+  }
+
+  .showev.visible {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 40px;
+  
+    color: #333;
+    transition: ease-in 3s;
+  }
+.clickshow {
+  color: blue;
+  text-decoration: underline;
+  cursor: grab;
+  background: none;
+  background-color: none;
 }
 .navpan-2 {
   display: none;  /*second navigation panel initially hidden*/
@@ -218,6 +243,32 @@ section.home-gallery img {
   .headpharma {
     background-color: #dddddd67;
     max-width: 100%;
+  }
+  .med-gallery{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+  }
+  .images {
+    text-align: center;
+  }
+  .staff-p{
+    font-size: larger;
+  }
+  .product button{
+    height: 20px;
+    width:100px;
+    background: none;
+  }
+  .images img{
+    border-radius: 5px;
+  }
+  #more {
+    opacity: 0;
+  }
+  #more.visible {
+    opacity: 1;
+    transition: ease-in 2s;
   }
 @media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
     .headingg{
@@ -326,6 +377,22 @@ padding: 0%;
       height: 50px;
       position: inherit;
     }
-
+    .images img{
+      border-radius: 5px;
+      width: 75%;
+      height: 30%;
+    }
+    .med-gallery{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;}
+      
+    .capt {
+      font-size: small;
+    }  
+    .product button{
+      height: 5px;
+      width:60px;
+      background: none;}
 
 }
