@@ -249,6 +249,9 @@ section.home-gallery img {
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
   }
+  .images img:hover{
+    border-radius: 18px;
+  }
   .images {
     text-align: center;
   }
@@ -394,5 +397,6 @@ padding: 0%;
       height: 5px;
       width:60px;
       background: none;}
+      
 
 }
