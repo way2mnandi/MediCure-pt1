@@ -273,6 +273,36 @@ section.home-gallery img {
     opacity: 1;
     transition: ease-in 2s;
   }
+  #preview {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* semi-transparent black */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* high so it appears above everything */
+  }
+  
+  #previewpict {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* soft white glow */
+    transition: transform 0.3s ease;
+  }
+  
+  #preview .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
 @media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
     .headingg{
         font-family: sans-serif;
