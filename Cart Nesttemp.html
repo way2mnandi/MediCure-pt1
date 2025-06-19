@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cartstyle.css">
+</head>
+<body>
+    <nav class="navpan">
+        | <a href="index.html">Home</a> |
+<a href="MediCure2U.html">Digital Pharmacy</a> |  <a href="Cart Nesttemp.html">View Cart</a>
+<a href=""><div class="staffdown">
+          <span class="staffdown-toggle">&#9776;Our Staff</span>
+    <div class="staffdown-content">
+        <a href="Staff.html#AllStaff">All Staff</a>
+        <a href="Staff.html#GenPrac">General Practitioners</a>
+        <a href="Staff.html#Physio">Physiologists</a>
+        <a href="Staff.html#Psycha">Psychiatrists</a>
+        </nav>
+    </div>    
+    </div></a>
+    <div class="navpan-2b" align="center" style="background-color: rgba(0, 0, 0, 0.322);"><nav class="navpan-2">
+        <a href="index.html">Home</a> <b> | </b>
+        <a href="MediCure2U.html">Digital Pharmacy</a> <b> | </b>
+        <a href="StaffMobi.html">Our Staff</a> <b> | </b>
+        <a href="Cart Nesttemp.html">View Cart</a>
+ </nav></div>
+ <div id="cartitemsback"><h2>Your Cart</h2>
+ <ul id="cartItems"></ul>
+ <p><strong>Total:</strong> R<span id="cartTotal"></span></p>
+ <button onclick="clearCart()">Clear Cart</button></div>
+ 
+ <script>
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+ 
+   function showCart() {
+     const list = document.getElementById("cartItems");
+     const total = document.getElementById("cartTotal");
+     list.innerHTML = "";
+     let sum = 0;
+ 
+     cart.forEach((item, index) => {
+       sum += item.price;
+       list.innerHTML += `<li>${item.name} - R${item.price} 
+         <button onclick="removeItem(${index})">Remove</button></li>`;
+     });
+ 
+     total.textContent = sum;
+   }
+ 
+   function removeItem(index) {
+     cart.splice(index, 1);
+     localStorage.setItem("cart", JSON.stringify(cart));
+     showCart();
+   }
+ 
+   function clearCart() {
+     localStorage.removeItem("cart");
+     location.reload();
+   }
+ 
+   showCart();
+ </script>
+ <script src="pharmacy script.js"></script>
+</body>
+</html>
