@@ -34,7 +34,13 @@
         <p align="center"><button type="submit">Send Enquiry</button></p>
 </form>
 
-<p id="enquiryResponse"></p></div>
+<p align="center" id="enquiryResponse"></p>
+<p align="center" onclick="openMap()" style="cursor: pointer; color: rgb(255, 255, 255); text-decoration: none;font-size:xx-large;">
+  <strong>Find Us</p>
+    <div id="mapLightbox" class="map-lightbox" style="display: none;">
+      <span class="close" onclick="closeMap()">×</span>
+      <div id="map"></div>
+  </div></div>
 <script>
     document.getElementById("enquiryForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -70,5 +76,6 @@
       });
     });
   </script>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -35,5 +35,9 @@ added more pages
  javascript implementation
  adding more information
 
- 16 June 
- 
+ 16 June-20 June 
+ added the pharmacy faetures
+ add to carty feature
+ added an AI response for diagnosis
+ added enquiry form
+ added leaflet interactive map on enquiry page
