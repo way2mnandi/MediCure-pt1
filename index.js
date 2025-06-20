@@ -34,10 +34,10 @@ window.onload = function () {
 };
 
 document.getElementById("showthecart").onclick = function () {
-  document.getElementById("htmlcart").classList.add("visible")
+  document.getElementById("htmlcart").classList.add("visible") //onclick function to open the updated cart page
 }
 
-function registerUser(event) {
+function registerUser(event) { //user registartion
   event.preventDefault();
 
   const username = document.getElementById("regUsername").value.trim();
@@ -49,7 +49,7 @@ function registerUser(event) {
     return;
   }
 
-  // gets existing users from localStorage
+
   const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
   // checks for duplicate username
@@ -60,7 +60,7 @@ function registerUser(event) {
     return;
   }
 
-  // addiing new users
+  
   storedUsers.push({ username, password });
   localStorage.setItem("users", JSON.stringify(storedUsers));
 
@@ -69,19 +69,19 @@ function registerUser(event) {
   document.querySelector("form").reset();
 }
 
-function loginUser(event) {
+function loginUser(event) {  //user login function
   event.preventDefault();
   const user = document.getElementById("username").value;
   const pass = document.getElementById("password").value;
 
-  const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+  const storedUsers = JSON.parse(localStorage.getItem("users")) || [];  //checks for user in the localstorage
   const valid = storedUsers.find(u => u.username === user && u.password === pass);
 
   if (valid) {
-    localStorage.setItem("loggedInUser", user);
+    localStorage.setItem("loggedInUser", user);  //proceeds to home page if login if the user is in storedUsers
     window.location.href = "index.html";
   } else {
-    document.getElementById("loginMessage").textContent = "Invalid login.";
+    document.getElementById("loginMessage").textContent = "Invalid login.";  //if the user doesnt exist, a prompt is sent back allowing users to retry
   }
 }
 function openMap() {
@@ -99,5 +99,5 @@ function openMap() {
     } else {
       map.invalidateSize();
     }
-  }, 300); // Wait for DOM update
+  }, 300); // loads interactive map(in enquiry page)
 }

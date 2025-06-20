@@ -28,10 +28,11 @@
  <div class="home"><h1 class="headingg"> <img class="logo" src="LOGO.png" alt=""MediCure Logo>Medi<SPAN class="span1">Cure</SPAN></h1>
     <h2>Tell Us How you feel!</h2>
 <form id="diagnosisForm">
+    <!--allows users to input symptoms and recieve assistance from an open AI api-->
     <p align="center"><textarea id="symptoms" rows="6" placeholder="e.g. Headache, sore throat, fatigue..." required></textarea><br><br></p>
     <p align="center"><button type="submit">Get Diagnosis</button></p>
 </form>
-
+<!--ai response displays below-->
 <p align="center" font color="black"><div id="pseudo-diagnosis" style="margin-top: 20px; background: #f0f0f0; padding: 10px; border-radius: 8px;height: 400px;"></div></p>
  </div>
  <script src="pseudo-diagnosis.js"></script>

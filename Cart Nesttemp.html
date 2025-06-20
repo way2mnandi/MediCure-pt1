@@ -29,7 +29,7 @@
  <div id="cartitemsback"><h2>Your Cart</h2>
  <ul id="cartItems"></ul>
  <p><strong>Total:</strong> R<span id="cartTotal"></span></p>
- <button onclick="clearCart()">Clear Cart</button></div>
+ <button onclick="clearCart()">Clear Cart</button></div><!--cart interactions-->
  
  <script>
    let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -38,7 +38,7 @@
      const list = document.getElementById("cartItems");
      const total = document.getElementById("cartTotal");
      list.innerHTML = "";
-     let sum = 0;
+     let sum = 0;   //the function that calculates cart total amounts stores results here
  
      cart.forEach((item, index) => {
        sum += item.price;
@@ -52,7 +52,7 @@
    function removeItem(index) {
      cart.splice(index, 1);
      localStorage.setItem("cart", JSON.stringify(cart));
-     showCart();
+     showCart(); //removes cart items using a remove buton
    }
  
    function clearCart() {

@@ -1,10 +1,10 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || []; //stores cart info in loacal storage as var
 
   function addToCart(name, price) {
     const item = { name, price };
     cart.push(item);
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${name} added to cart. Cart total: R${getTotal()}`);
+    alert(`${name} added to cart. Cart total: R${getTotal()}`); //tells users if their item was actually added
   }
 
   function getTotal() {
@@ -19,7 +19,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let sum = 0;
 
     cart.forEach((item, index) => {
-      sum += item.price;
+      sum += item.price;  //calculates cart value
       list.innerHTML += `<li>${item.name} - R${item.price} 
         <button onclick="removeItem(${index})">Remove</button></li>`;
     });
@@ -27,7 +27,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
     total.textContent = sum;
   }
 
-  function removeItem(index) {
+  function removeItem(index) {  //function to remove items from cart
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
     showCart();
@@ -39,7 +39,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
   }
 
   showCart();
-  function searchProducts() {
+  function searchProducts() {  //product search feature
     const input = document.getElementById("searchInput").value.toLowerCase();
     const products = document.querySelectorAll(".product");
 

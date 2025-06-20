@@ -22,14 +22,14 @@ app.post("/diagnose", async (req, res) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.OPENAI_KEY}`,
+        Authorization: `Bearer ${process.env.OPENAI_KEY}`, //fetches api key from hidden file env
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [
           {
             role: "system",
-            content:
+            content:  //tells the AI how to behave
               "You are a helpful medical assistant. Provide possible causes for symptoms and always recommend consulting a healthcare professional.",
           },
           {
