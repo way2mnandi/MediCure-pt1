@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -37,10 +42,16 @@
     
     
     <footer class="bottompan">
-        <p><strong>Address:<br></strong> 123 Health Avenue,<br> Sandton,<br> Johannesburg,<br> 2196</p>
+        <p color="white" onclick="openMap()" style="cursor: pointer; color: blue; text-decoration: none;">
+            <strong>Address:<br></strong> 123 Health Avenue,<br> Sandton,<br> Johannesburg,<br> 2196
+          </p>
     <p><strong>Phone:</strong> +27 11 456 7890</p>
     <p><strong>Email:</strong> <a class="link" href="letushelp@medicure.co.za">letushelp@medicure.co.za</a></p>
     </footer>
+    <div id="mapLightbox" class="map-lightbox" style="display: none;">
+        <span class="close" onclick="closeMap()">×</span>
+        <div id="map"></div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

@@ -84,3 +84,20 @@ function loginUser(event) {
     document.getElementById("loginMessage").textContent = "Invalid login.";
   }
 }
+function openMap() {
+  const box = document.getElementById("mapLightbox");
+  box.style.display = "flex";
+
+  setTimeout(() => {
+    if (!window.myMapInitialized) {
+      const map = L.map("map").setView([-26.1076, 28.0567], 15);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      L.marker([-26.1076, 28.0567]).addTo(map).bindPopup("Sandton Clinic").openPopup();
+      window.myMapInitialized = true;
+    } else {
+      map.invalidateSize();
+    }
+  }, 300); // Wait for DOM update
+}

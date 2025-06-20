@@ -246,7 +246,7 @@ section.home-gallery img {
   }
   .med-gallery{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 15px;
   }
   .images img:hover{
@@ -358,6 +358,39 @@ section.home-gallery img {
     align-items: center;
     z-index: 9999;
   }
+  .map-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .map-lightbox #map {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 12px;
+  }
+  
+  .map-lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
+  #map {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 10px;
+  }
+  
   
 @media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
     .headingg{
@@ -473,7 +506,8 @@ padding: 0%;
     }
     .med-gallery{
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      display: grid;
       gap: 5px;
       padding: 10px;
     }
@@ -481,7 +515,7 @@ padding: 0%;
     .capt {
       font-size: small;
     }  
-    .product button{
+    .add{
       height: 5px;
       width:60px;
       background: none;}
