@@ -1,4 +1,4 @@
-// server.js
+// server
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -6,8 +6,8 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());           // Enable CORS for all origins
-app.use(express.json());   // Parse JSON request bodies
+app.use(cors());           
+app.use(express.json());  
 
 app.post("/diagnose", async (req, res) => {
   const symptoms = req.body.symptoms;
@@ -17,7 +17,7 @@ app.post("/diagnose", async (req, res) => {
   }
 
   try {
-    // Use native fetch (Node 18+)
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {

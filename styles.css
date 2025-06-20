@@ -272,6 +272,93 @@ section.home-gallery img {
     opacity: 1;
     transition: ease-in 2s;
   }
+  #preview {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* semi-transparent black */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* high so it appears above everything */
+  }
+  
+  #previewpict {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* soft white glow */
+    transition: transform 0.3s ease;
+  }
+  
+  #preview .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .homepromptstyle {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .promptbox {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+  
+  .promptbuttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .promptbuttons button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .promptbuttons button:first-child {
+    background-color: #4c53af;
+    color: white;
+  }
+  
+  .promptbuttons button:last-child {
+    background-color: crimson;
+    color: white;
+  }
+  #htmlcart{
+    display:none;
+  }
+  #htmlcart.visible {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
 @media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
     .headingg{
         font-family: sans-serif;
