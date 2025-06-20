@@ -1,0 +1,174 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url("BG.jpeg");
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.home {
+    background-color: rgba(240, 248, 255, 0.541);
+    margin-top: 90px;
+    width: 100%;
+    margin-left: 0px; /*default*/
+    padding: 0px;
+}
+.logo {
+  height: 100px;
+  width: 100px;
+  position:relative;
+  padding: 0px;
+}
+.headingg{
+    font-family: sans-serif;
+    text-align: center;
+    color: blue;
+    font-size: 60pt;
+    text-shadow: 0.025cm black transparent -20%;
+    background-color: #dddddd67;
+}
+
+.navpan a {
+    text-decoration-color: beige;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14pt;
+    text-decoration: white;
+    color: beige;
+}
+
+.navpan {
+    text-transform: uppercase;
+    background :none;
+    padding: 30px 0;
+    max-width: 50%;
+    position: absolute;
+    right: 15%;
+    top: 0;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.navpan a:hover {
+    font-size: 13pt;
+    text-decoration: overline red;
+}
+
+.span1 {
+    color: rgb(255, 0, 0);
+    font-size: 60pt;
+    text-shadow: 0.025cm black transparent -20%;
+    font-family: sans-serif;
+}
+
+.staffdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.staffdown-toggle {
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.staffdown-content {
+    display: none;  
+    position: absolute;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.staffdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.staffdown-content a:hover {
+    background: #ddd;
+}
+
+.staffdown:hover .staffdown-content {
+    display: block;
+}
+
+.menu {
+    display: none;
+    background: none;
+    text-align: inherit;
+}
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    color: lightskyblue;
+    -webkit-text-stroke: 1pt purple;
+    text-decoration: underline blueviolet;
+}
+.staff-section {
+    display: none;
+    border-radius: 10px;
+    transition: ease-in 2s;
+}
+
+.staff-section:target {
+    display:contents;
+  
+}
+#cartitemsback {
+    background-color: #dddddd63;
+    padding: 10px;
+    margin-top: 50px;
+}
+@media only screen and (orientation: portrait) /*mobile viewing compatibility*/ {
+    .navpan {
+        display: none;   /*hides initial navigation panel to enhance responsiveness*/
+    }
+    .navpan-2 {
+        display: contents;
+        max-width: 100%;
+        padding: 0px;
+        background-color: rgba(250, 235, 215, 0.5);
+        
+      }
+      .navpan-2b {
+padding: 0%;
+      }
+      .navpan-2 a {
+        font-size: 10pt;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: white;
+      }
+      .staff-nav {
+        display: contents;   /*new navigation panel FOR STAFF SECTION*/
+
+      }
+      .staff-nav a {
+        color: black;
+        text-align: left;
+      }
+      .head1-mobi li {
+        text-align: left;
+      }
+      .home {
+        background-color: rgba(240, 248, 255, 0.541);
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0px; /*default*/
+        padding: 0px;
+    }
+    .head1 p {
+      display: contents;  /*displays paragraph only for portrait orientation*/
+      text-align: left;
+    }
+    .staff-nav ul {
+      display: contents;
+    text-align: left;}
+}

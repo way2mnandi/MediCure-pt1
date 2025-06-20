@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+ <div class="home"><h1 class="headingg"> <img class="logo" src="LOGO.png" alt=""MediCure Logo>Medi<SPAN class="span1">Cure</SPAN></h1>
+    <h2>Login to MediCure</h2>
+<form onsubmit="loginUser(event)">
+  <p align="center"><input type="text" id="username" placeholder="Username" required></p><br><br>
+  <p align="center"><input type="password" id="password" placeholder="Password" required></p><br><br>
+  <p align="center"><button type="submit">Login</button> <button><a href="Sign Up.html">Sign Up</a></button></p> <!--items nested in p tags to align to center-->
+</form>
+<p id="loginMessage" style="color:red;"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

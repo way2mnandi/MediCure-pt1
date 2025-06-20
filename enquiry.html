@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navpan">
+        | <a href="index.html">Home</a> | 
+<a href="MediCure2U.html">Digital Pharmacy</a> |
+<a href=""><div class="staffdown">
+    <span class="staffdown-toggle">&#9776;Our Staff</span>
+    <div class="staffdown-content">
+        <a href="Staff.html#Physiologists">Physiologists</a>
+        <a href="Staff.html#GenPrac">General Practitioners</a>
+        <a href="Staff.html#Psycho">Psychologits</a>
+        <a href="Staff.html#Psycha">Psychiatrists</a></nav>
+    </div>    
+    </div></a>
+    <div class="navpan-2b" align="center" style="background-color: rgba(0, 0, 0, 0.322);"><nav class="navpan-2">
+        <a href="index.html">Home</a> <b> | </b>
+        <a href="MediCure2U.html">Digital Pharmacy</a> <b> | </b>
+        <a href="StaffMobi.html">Our Staff</a> <b> | </b>
+ </nav></div>
+    
+ <div class="home"><h1 class="headingg"> <img class="logo" src="LOGO.png" alt=""MediCure Logo>Medi<SPAN class="span1">Cure</SPAN></h1>
+    <h2>Contact Us / Enquire</h2>
+<form id="enquiryForm">
+  <p align="center"><input type="text" name="name" placeholder="Your Name" required><br><br></p>
+  <p align="center"><input type="email" name="email" placeholder="Your Email" required><br><br></p>
+    <p align="center"><textarea style="height: 200px; width: 500px;" name="message" placeholder="Your Message" required></textarea><br><br></p>
+        <p align="center"><button type="submit">Send Enquiry</button></p>
+</form>
+
+<p id="enquiryResponse"></p></div>
+<script>
+    document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const form = e.target;
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+  
+      // Basic frontend validation
+      if (!name || !email || !message) {
+        document.getElementById("enquiryResponse").textContent = "All fields are required.";
+        return;
+      }
+  
+      // Simulate AJAX "send"
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("enquiryResponse").style.color = "green";
+        document.getElementById("enquiryResponse").textContent = "Enquiry sent successfully!";
+        form.reset();
+      })
+      .catch(() => {
+        document.getElementById("enquiryResponse").style.color = "red";
+        document.getElementById("enquiryResponse").textContent = "Failed to send. Try again.";
+      });
+    });
+  </script>
+</body>
+</html>

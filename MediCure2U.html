@@ -7,96 +7,81 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="navpan">
         | <a href="index.html">Home</a> |
-<a href="MediCure2U.html">Digital Pharmacy</a> |
+<a href="MediCure2U.html">Digital Pharmacy</a> |  <a href="Cart Nesttemp.html">View Cart</a>
 <a href=""><div class="staffdown">
-    <span class="staffdown-toggle">&#9776;Our Staff</span>
+          <span class="staffdown-toggle">&#9776;Our Staff</span>
     <div class="staffdown-content">
         <a href="Staff.html#AllStaff">All Staff</a>
         <a href="Staff.html#GenPrac">General Practitioners</a>
         <a href="Staff.html#Physio">Physiologists</a>
-        <a href="Staff.html#Psycha">Psychiatrists</a></nav>
+        <a href="Staff.html#Psycha">Psychiatrists</a>
+        </nav>
     </div>    
     </div></a>
     <div class="navpan-2b" align="center" style="background-color: rgba(0, 0, 0, 0.322);"><nav class="navpan-2">
         <a href="index.html">Home</a> <b> | </b>
         <a href="MediCure2U.html">Digital Pharmacy</a> <b> | </b>
         <a href="StaffMobi.html">Our Staff</a> <b> | </b>
+        <a href="Cart Nesttemp.html">View Cart</a>
  </nav></div>
  
+ 
  <div class="home"><h1 class="headingg"><img src="LOGO.png" alt="logo" class="logo">Medi<SPAN class="span1">Cure</SPAN>2U</h1>
- <section class="med-gallery">
-    <figure class="images">
-      <img src="panado.jfif" alt="Panado">
-      <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-      <button id="add" class="add">Add to Cart</button>
+  <p class="search" align="center"><input style="align-self: center;" type="text" id="searchInput" placeholder="Search for medicine..." onkeyup="searchProducts()">
+  </p>
+  <section class="med-gallery">
+    <figure class="images product">
+      <img src="panado.jfif" alt="Panado" onclick="preview(this.src)">
+      <figcaption class="capt">
+        <h3>Panado 500mg</h3>
+        <p>R25.00</p>
+        <button class="add" onclick="addToCart('Panado 500mg', 25)">Add to Cart</button>
+      </figcaption>
     </figure>
-    <figure class="images">
-        <img src="brooklax.jfif" alt="Brooklax">
-        <h3 class="capt">Brooklax 500mg <br><p class="capt">R40.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="andolex.jfif" alt="Andolex">
-        <h3 class="capt">Andolex 200ml <br><p class="capt">R65.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="nurofen.jfif" alt="Nurofen">
-        <h3 class="capt">Nurofen 200mg <br><p class="capt">R50.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure>
-      <figure class="images">
-        <img src="panado.jfif" alt="Panado">
-        <h3 class="capt">Panado 500mg <br><p class="capt">R25.00</p></h3>
-        <button id="add" class="add">Add to Cart</button>
-      </figure></section>
+  
+    <figure class="images product">
+      <img src="brooklax.jfif" alt="Brooklax" onclick="preview(this.src)">
+      <figcaption class="capt">
+        <h3>Brooklax 500mg</h3>
+        <p>R40.00</p>
+        <button class="add" onclick="addToCart('Brooklax 500mg', 40)">Add to Cart</button>
+      </figcaption>
+    </figure>
+  
+    <figure class="images product">
+      <img src="andolex.jfif" alt="Andolex" onclick="preview(this.src)">
+      <figcaption class="capt">
+        <h3>Andolex 200ml</h3>
+        <p>R65.00</p>
+        <button class="add" onclick="addToCart('Andolex 200ml', 65)">Add to Cart</button>
+      </figcaption>
+    </figure>
+  
+    <figure class="images product">
+      <img src="brochol.jfif" alt="Bronchol" onclick="preview(this.src)">
+      <figcaption class="capt">
+        <h3>Bronchol 120ml</h3>
+        <p>R65.00</p>
+        <button class="add" onclick="addToCart('Bronchol 120ml', 65)">Add to Cart</button>
+      </figcaption>
+    </figure>
+ 
+  </section>
+<!--lightbox display-->
+  <div id="preview" onclick="closepreview()" style="display: none; justify-content: center; align-items: center;">
+    <span class="close" onclick="closepreview()">×</span>
+    <img id="previewpict" src="">
+  </div>
     <footer class="bottompan">
         <div class="show"><h3 align="center"><a href="About Us.html">About Us</a></h3></div>
         <p><strong>Address:<br></strong> 123 Health Avenue,<br> Sandton,<br> Johannesburg,<br> 2196</p>
     <p><strong>Phone:</strong> +27 11 456 7890</p>
     <p><strong>Email:</strong> <a class="link" href="letushelp@medicure.co.za">letushelp@medicure.co.za</a></p>
     </footer>
+    <script src="index.js"></script>
+    <script src="pharmacy script.js"></script>
 </body>
 </html>
